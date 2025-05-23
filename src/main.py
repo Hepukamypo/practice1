@@ -1,3 +1,4 @@
+import os
 import sqlite3
 from aiogram import Bot, Dispatcher, types, executor
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
@@ -8,8 +9,11 @@ from aiogram.utils.callback_data import CallbackData
 from datetime import datetime, timedelta
 from aiogram.types import ParseMode
 import random
+from dotenv import load_dotenv
+import os
 
-API_TOKEN = '7670720411:AAEebgA22Srfn6znJGuBjsTDxtXX3zhiF-0'
+load_dotenv()
+API_TOKEN = os.getenv("API_TOKEN")
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
