@@ -10,7 +10,6 @@ from datetime import datetime, timedelta
 from aiogram.types import ParseMode
 import random
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 API_TOKEN = os.getenv("API_TOKEN")
